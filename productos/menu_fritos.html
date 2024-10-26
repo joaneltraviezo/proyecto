@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Fritos - El Gato Enojado</title>
+    <link rel="stylesheet" href="menu_fritos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="menu-header">
+            <h1>Menú de Fritos</h1>
+            <a href="index.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Volver al Inicio</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="menu-items">
+            <div class="menu-item" data-id="1" data-name="Fritos con Queso" data-price="50">
+                <img src="imagenes/fritos_queso.png" alt="Fritos con Queso">
+                <div class="item-details">
+                    <h2>Fritos con Queso</h2>
+                    <p class="price">$50</p>
+                    <button class="add-to-cart-btn"><i class="fa-solid fa-cart-plus"></i> Agregar al Carrito</button>
+                </div>
+            </div>
+
+            <div class="menu-item" data-id="2" data-name="Fritos Picantes" data-price="55">
+                <img src="imagenes/fritos_picantes.png" alt="Fritos Picantes">
+                <div class="item-details">
+                    <h2>Fritos Picantes</h2>
+                    <p class="price">$55</p>
+                    <button class="add-to-cart-btn"><i class="fa-solid fa-cart-plus"></i> Agregar al Carrito</button>
+                </div>
+            </div>
+
+            <div class="menu-item" data-id="3" data-name="Fritos con Guacamole" data-price="60">
+                <img src="imagenes/fritos_guacamole.png" alt="Fritos con Guacamole">
+                <div class="item-details">
+                    <h2>Fritos con Guacamole</h2>
+                    <p class="price">$60</p>
+                    <button class="add-to-cart-btn"><i class="fa-solid fa-cart-plus"></i> Agregar al Carrito</button>
+                </div>
+            </div>
+        </section>
+        <script src="carrito.js"></script> 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cartButtons = document.querySelectorAll('.add-to-cart-btn');
+            
+            cartButtons.forEach(button => {
+                button.addEventListener('click', (event) => {
+                    const menuItem = event.target.closest('.menu-item');
+                    const productId = menuItem.dataset.id;
+                    const productName = menuItem.dataset.name;
+                    const productPrice = menuItem.dataset.price;
+                    
+                    addToCart(productId, productName, productPrice);
+                });
+            });
+        });
+    </script>
+    </main>
+
+    <footer>
+        <p>El Gato Enojado &copy; 2024</p>
+    </footer>
+    <script src="carrito.js"></script> 
+</body>
+</html>
