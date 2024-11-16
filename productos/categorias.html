@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categorías - El Gato Enojado</title>
+    
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Tint&family=Monoton&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="categorias.css">
+</head>
+<body>
+    <header>
+        <div class="header-left"></div>
+        <div class="logo">
+            <img src="imagenes/gato.png" alt="El Gato Enojado">
+        </div>
+        <h1>Categorías de Productos</h1>
+    </header>
+
+    <div class="container">
+        <table id="productosTable" class="display">
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Descripción</th>
+                    <th>Precio</th>
+                    <th>Categoría</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Tacos al Pastor</td>
+                    <td>Deliciosos tacos con carne al pastor</td>
+                    <td><input type="number" value="15" class="precio-editable" data-id="1"></td>
+                    <td>Antojitos</td>
+                    <td><button class="btn-actualizar" data-id="1">Actualizar</button></td>
+                </tr>
+                <tr>
+                    <td>Aguas Frescas</td>
+                    <td>Bebidas naturales refrescantes</td>
+                    <td><input type="number" value="10" class="precio-editable" data-id="2"></td>
+                    <td>Bebidas</td>
+                    <td><button class="btn-actualizar" data-id="2">Actualizar</button></td>
+                </tr>
+                <tr>
+                    <td>Churros</td>
+                    <td>Postre tradicional con canela y azúcar</td>
+                    <td><input type="number" value="12" class="precio-editable" data-id="3"></td>
+                    <td>Postres</td>
+                    <td><button class="btn-actualizar" data-id="3">Actualizar</button></td>
+                </tr>
+                <tr>
+                    <td>Desayuno Completo</td>
+                    <td>Desayuno con huevos, frijoles y café</td>
+                    <td><input type="number" value="40" class="precio-editable" data-id="4"></td>
+                    <td>Desayunos</td>
+                    <td><button class="btn-actualizar" data-id="4">Actualizar</button></td>
+                </tr>
+                <tr>
+                    <td>Enchiladas Verdes</td>
+                    <td>Enchiladas con salsa verde, crema y queso</td>
+                    <td><input type="number" value="30" class="precio-editable" data-id="5"></td>
+                    <td>Antojitos</td>
+                    <td><button class="btn-actualizar" data-id="5">Actualizar</button></td>
+                </tr>
+                <tr>
+                    <td>Refrescos</td>
+                    <td>Variedad de refrescos gaseosos</td>
+                    <td><input type="number" value="8" class="precio-editable" data-id="6"></td>
+                    <td>Bebidas</td>
+                    <td><button class="btn-actualizar" data-id="6">Actualizar</button></td>
+                </tr>
+                <tr>
+                    <td>Flan Napolitano</td>
+                    <td>Postre cremoso con caramelo</td>
+                    <td><input type="number" value="20" class="precio-editable" data-id="7"></td>
+                    <td>Postres</td>
+                    <td><button class="btn-actualizar" data-id="7">Actualizar</button></td>
+                </tr>
+                <tr>
+                    <td>Molletes</td>
+                    <td>Pan con frijoles, queso y pico de gallo</td>
+                    <td><input type="number" value="25" class="precio-editable" data-id="8"></td>
+                    <td>Desayunos</td>
+                    <td><button class="btn-actualizar" data-id="8">Actualizar</button></td>
+                </tr>
+                <tr>
+                    <td>Tamal de Elote</td>
+                    <td>Tamal suave hecho de maíz dulce</td>
+                    <td><input type="number" value="18" class="precio-editable" data-id="9"></td>
+                    <td>Antojitos</td>
+                    <td><button class="btn-actualizar" data-id="9">Actualizar</button></td>
+                </tr>
+                <tr>
+                    <td>Licuados</td>
+                    <td>Bebidas a base de leche y frutas</td>
+                    <td><input type="number" value="12" class="precio-editable" data-id="10"></td>
+                    <td>Bebidas</td>
+                    <td><button class="btn-actualizar" data-id="10">Actualizar</button></td>
+                </tr>
+                <tr>
+                    <td>Pastel de Tres Leches</td>
+                    <td>Pastel esponjoso con tres tipos de leche</td>
+                    <td><input type="number" value="35" class="precio-editable" data-id="11"></td>
+                    <td>Postres</td>
+                    <td><button class="btn-actualizar" data-id="11">Actualizar</button></td>
+                </tr>
+                <tr>
+                    <td>Hot Cakes</td>
+                    <td>Hot cakes servidos con miel y mantequilla</td>
+                    <td><input type="number" value="28" class="precio-editable" data-id="12"></td>
+                    <td>Desayunos</td>
+                    <td><button class="btn-actualizar" data-id="12">Actualizar</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Inicializar DataTables
+            $('#productosTable').DataTable({
+                "language": {
+                    "url": "//cdn.datatables.net/plug-ins/1.11.5/i18n/Spanish.json"
+                }
+            });
+
+            // Recuperar precios del localStorage
+            if (localStorage.getItem("precios")) {
+                const preciosGuardados = JSON.parse(localStorage.getItem("precios"));
+                preciosGuardados.forEach(precio => {
+                    $(`input[data-id="${precio.id}"]`).val(precio.precio);
+                });
+            }
+
+            // Función para actualizar el precio en la tabla
+            $('.btn-actualizar').click(function() {
+                const productId = $(this).data('id');
+                const nuevoPrecio = $(`input[data-id="${productId}"]`).val();
+
+                // Guardar el precio actualizado en localStorage
+                let preciosGuardados = localStorage.getItem("precios") ? JSON.parse(localStorage.getItem("precios")) : [];
+                
+                // Verificar si ya existe el producto en localStorage
+                const index = preciosGuardados.findIndex(precio => precio.id === productId);
+                if (index !== -1) {
+                    preciosGuardados[index].precio = nuevoPrecio;
+                } else {
+                    preciosGuardados.push({ id: productId, precio: nuevoPrecio });
+                }
+
+                // Actualizar el localStorage
+                localStorage.setItem("precios", JSON.stringify(preciosGuardados));
+
+                // Mensaje de confirmación
+                alert(`El precio del producto con ID ${productId} se ha actualizado a $${nuevoPrecio}`);
+            });
+        });
+    </script>
+</body>
+</html>
